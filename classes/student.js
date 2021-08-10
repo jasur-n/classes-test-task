@@ -4,7 +4,7 @@ class User {
       this.surname = surname;
     }
   
-    getFullName(){
+    get getFullName(){
         return `${this.name} ${this.surname}`;
     }
 }
@@ -15,8 +15,7 @@ class Student extends User {
         this.year=year;
     }
 
-    getCourse(){
-        //In the task explanation it was said to not use methods. 
+    get getCourse(){
         const currentYear=new Date().getFullYear();
         return currentYear-this.year;
     }
